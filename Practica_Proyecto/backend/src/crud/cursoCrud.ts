@@ -64,9 +64,8 @@ router.put("/curso/:id", (async (req: Request, res: Response) => {
     curso.descripcion = descripcion;
     await cursoRepo.save(curso);
     res.json(curso);
-  } catch (e) {
-    console.error('Se detectó un error, se relanza:', e);
-    throw e;
+  } catch (error) {
+    res.status(500).json({ error: 'Se detectó un error al crear curso:', details: error });
   }
 }) as RequestHandler);
 
