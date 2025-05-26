@@ -9,6 +9,10 @@ body {
   background-color: #f0f2f5;
 }
 
+.oculto {
+  display: none;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -86,9 +90,4 @@ button {
 
 button:hover {
   background-color: #059669;
-}
-
-/* Ocultar secciones */
-.oculto {
-  display: none;
 }

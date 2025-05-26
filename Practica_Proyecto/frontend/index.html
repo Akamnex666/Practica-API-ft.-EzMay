@@ -13,11 +13,9 @@
     <aside class="sidebar">
       <h2>📘 Panel</h2>
       <ul>
-        <li onclick="cambiarVista('inicio')">Inicio</li>
-        <li onclick="cambiarVista('cursos')">Cursos</li>
-        <li onclick="cambiarVista('tablaCursos')">Ver Cursos</li> <!-- NUEVO -->
-        <li onclick="cambiarVista('estudiantes')">Estudiantes</li>
-        <li onclick="cambiarVista('tablaEstudiantes')">Ver Estudiantes</li> <!-- NUEVO -->
+        <li><button onclick="cambiarVista('inicio')">Inicio</button></li>
+        <li><button onclick="cambiarVista('tablaCursos')">Cursos</button></li>
+        <li><button onclick="cambiarVista('tablaEstudiantes')">Estudiantes</button></li>
       </ul>
     </aside>
 
@@ -56,6 +54,7 @@
       <!-- TABLA ESTUDIANTES -->
       <section id="tablaEstudiantes" class="vista oculto">
         <h2>📊 Tabla de Estudiantes</h2>
+        <button onclick="cambiarVista('estudiantes')">Crear</button>
         <table border="1">
           <thead>
             <tr>
@@ -63,6 +62,7 @@
               <th>Email</th>
               <th>Cédula</th>
               <th>Curso</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody id="tablaEstudiantesBody"></tbody>
@@ -72,11 +72,13 @@
       <!-- TABLA CURSOS -->
       <section id="tablaCursos" class="vista oculto">
         <h2>📚 Tabla de Cursos</h2>
+        <button onclick="cambiarVista('cursos')">Crear</button>
         <table border="1">
           <thead>
             <tr>
               <th>Nombre</th>
               <th>Descripción</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody id="tablaCursosBody"></tbody>
@@ -84,7 +86,7 @@
       </section>
     </main>
   </div>
-  <script src="script.js"></script>
+   <script src="script.js"></script>
 
 </body>
 
